@@ -1,13 +1,13 @@
-data class Conversation(val name:String,
-                   val lastMsg: String,
-                   val unreadMsg: Int,
-                   val time: String){
-    fun getNameAndMessage(): String{
-        return "Name = $name, last message = $lastMsg"
-    }
-}
+
 fun main(args: Array<String>) {
-    val conversationJoko = Conversation("Joko","Hai",30,"19.45")
+    val conversationJoko = Conv("Joko","Hai",30,"19.45")
+    val conversationAndi = Conv("Andi","halo",1,"1955")
     println(conversationJoko)
     println(conversationJoko.getNameAndMessage())
+
+    val listConv = mutableListOf(conversationJoko,conversationJoko.getNameAndMessage())
+    println("sebelum: $listConv")
+    listConv.add(conversationAndi)
+    println("sesudah: $listConv")
+
 }
