@@ -9,7 +9,7 @@ fun main(args: Array<String>) {
     println("sebelum: $listConv")
     listConv.add(conversationAndi)
     println("sesudah: $listConv")
-    println(showMapOf())
+    showMapOf()
 }
 fun showMapOf(){
     val mapConv = mutableMapOf<String,Conv>()
